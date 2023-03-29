@@ -19,9 +19,21 @@
 
     <form action="{{ route('barang.store') }}" method="POST">
                         @csrf
+
+                        <div class="row mb-xxl-1">
+                            <label for="id_supplier" class="col-sm-3 col-form-label">Supplier</label>
+                            <div class="col-sm-4">
+                                <select class="form-control" name="id_supplier" id="id_supplier" required>
+                                    <option value="">pilih</option>
+                                    @foreach ( $supplier as $item )
+                                    <option value='{{ $item->id_supplier }}'>{{ $item->nama_supplier }}</option>
+                                </select>
+                                @endforeach
+                             </div>
+                        </div><br>
                         <div class="row mb-4">
                             <label for="nama_barang" class="col-sm-3 col-form-label">Nama Jajan</label>
-                            <div class="col-sm-9">
+                            <div class="col-sm-5">
                                 <input type="text" class="form-control" name="nama_barang" id="nama_barang">
                             </div>
                         </div>

@@ -27,6 +27,7 @@
                     <table id="datatable-buttons" class="table table-bordered dt-responsive nowrap w-100">
                         <thead>
                             <tr>
+                                <th>Nama Supllier</th>
                                 <th>Nama Barang</th>
                                 <th>Jumlah Barang</th>
                                 <th>harga Barang</th>
@@ -37,9 +38,10 @@
                         <tbody>
                             @foreach ($barang as $item)
                             <tr>
+                                <td>{{ $item->supplier->nama_supplier }}</td>
                                 <td>{{ $item->nama_barang }}</td>
                                 <td>{{ $item->jumlah_barang }}</td>
-                                <td>{{ $item->id_supplier }}</td>
+                                <td>Rp.{{ $item->harga_barang }}/pcs</td>
                             </tr>
                             @endforeach
                         </tbody>

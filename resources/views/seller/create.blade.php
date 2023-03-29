@@ -5,8 +5,8 @@
 @section('content')
 
     @component('components.breadcrumb')
-        @slot('li_1') Supplier @endslot
-        @slot('title') Form Supplier @endslot
+        @slot('li_1') Seller @endslot
+        @slot('title') Form Seller @endslot
     @endcomponent
 
 

@@ -33,12 +33,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @foreach ($supplier as $item)
+                            {{-- @foreach ($supplier as $item)
                             <tr>
                                 <td>{{ $item->nama_supplier }}</td>
                                 <td>{{ $item->nama_warung }}</td>
                             </tr>
-                            @endforeach
+                            @endforeach --}}
                         </tbody>
                     </table>
                 </div>
