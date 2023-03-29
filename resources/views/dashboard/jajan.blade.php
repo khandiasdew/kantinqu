@@ -29,6 +29,8 @@
                             <tr>
                                 <th>Nama Barang</th>
                                 <th>Jumlah Barang</th>
+                                <th>harga Barang</th>
+                                <th>tes</th>
 
                             </tr>
                         </thead>
@@ -37,6 +39,7 @@
                             <tr>
                                 <td>{{ $item->nama_barang }}</td>
                                 <td>{{ $item->jumlah_barang }}</td>
+                                <td>{{ $item->id_supplier }}</td>
                             </tr>
                             @endforeach
                         </tbody>
