@@ -28,7 +28,7 @@
                         <thead>
                             <tr>
                                 <th>Nama supplier</th>
-                                <th>Jumlah supplier</th>
+                                <th>Nama Warung</th>
 
                             </tr>
                         </thead>

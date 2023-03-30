@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\barang;
+use App\Models\seller;
 use App\Models\supplier;
 use Illuminate\Http\Request;
 
@@ -16,7 +17,9 @@ class barangController extends Controller
     public function index()
     {
         $barang = barang::all();
-        return view('dashboard.jajan', compact('barang'));
+        $seller = seller::all();
+        $seller = $seller->get(0);
+        return view('dashboard.jajan', compact('barang','seller'));
     }
 
     /**

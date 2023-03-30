@@ -15,11 +15,11 @@
     @endcomponent
 
 
+    <h2>{{ $seller->nama_seller }}</h2>
     <div class="row">
         <div class="col-12">
             <div class="card">
                 <div class="card-body">
-
                     <h4 class="card-title">Data Barang</h4>
                     <p class="card-title-desc">semua data barang/makanan dan minuman terinci di tabel ini
                     </p>
@@ -31,14 +31,12 @@
                                 <th>Nama Barang</th>
                                 <th>Jumlah Barang</th>
                                 <th>harga Barang</th>
-                                <th>tes</th>
-
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($barang as $item)
                             <tr>
-                                <td>{{ $item->supplier->nama_supplier }}</td>
+                                <td>{{ $item->supplier->nama_supplier }}    <a href="" class="fas fa-plus-circle"></a></td>
                                 <td>{{ $item->nama_barang }}</td>
                                 <td>{{ $item->jumlah_barang }}</td>
                                 <td>Rp.{{ $item->harga_barang }}/pcs</td>

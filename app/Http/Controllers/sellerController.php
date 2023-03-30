@@ -49,7 +49,8 @@ class sellerController extends Controller
      */
     public function show($id)
     {
-        //
+        // $seller = seller::find($id);
+        // return view('dashboard.jajan', compact)
     }
 
     /**
