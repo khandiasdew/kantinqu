@@ -73,7 +73,9 @@ class supplierController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $supplier = supplier::find($id);
+        $supplier->update($request->all());
+        $supplier->save();
     }
 
     /**
@@ -85,5 +87,11 @@ class supplierController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function delete($id){
+
+        $supplier = supplier::where('id_supplier', $id);
+    $supplier->delete();
+        return redirect()->route('admin.index');
     }
 }

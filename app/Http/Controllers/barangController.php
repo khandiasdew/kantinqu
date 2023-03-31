@@ -65,7 +65,6 @@ class barangController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**
@@ -77,7 +76,9 @@ class barangController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $barang = barang::find($id);
+        $barang->update($request->all());
+        $barang->save();
     }
 
     /**
@@ -89,5 +90,11 @@ class barangController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function delete($id){
+
+        $barang = barang::where('id_barang', $id);
+    $barang->delete();
+        return redirect()->route('admin.index');
     }
 }

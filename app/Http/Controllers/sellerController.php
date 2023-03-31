@@ -73,7 +73,9 @@ class sellerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $seller = seller::find($id);
+        $seller->update($request->all());
+        $seller->save();
     }
 
     /**
@@ -85,5 +87,11 @@ class sellerController extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function delete($id){
+
+        $seller = seller::where('id_seller', $id);
+        $seller->delete();
+        return redirect()->route('admin.index');
     }
 }
