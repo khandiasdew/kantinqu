@@ -15,7 +15,7 @@ class supplierController extends Controller
     public function index()
     {
         $supplier = supplier::all();
-        return view('dashboard.supplier',compact('supplier'));
+        return view('supplier.supplier',compact('supplier'));
     }
 
     /**

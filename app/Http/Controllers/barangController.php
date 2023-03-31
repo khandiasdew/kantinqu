@@ -19,7 +19,7 @@ class barangController extends Controller
         $barang = barang::all();
         $seller = seller::all();
         $seller = $seller->get(0);
-        return view('dashboard.jajan', compact('barang','seller'));
+        return view('barang.barang', compact('barang','seller'));
     }
 
     /**
@@ -30,7 +30,7 @@ class barangController extends Controller
     public function create()
     {
         $supplier = supplier::all();
-        return view('barang.jajan', compact('supplier'));
+        return view('barang.create', compact('supplier'));
     }
 
     /**

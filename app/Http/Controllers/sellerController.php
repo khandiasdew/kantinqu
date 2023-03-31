@@ -15,7 +15,7 @@ class sellerController extends Controller
     public function index()
     {
         $seller= seller::all();
-        return view('dashboard.seller',compact('seller'));
+        return view('seller.seller',compact('seller'));
     }
 
     /**

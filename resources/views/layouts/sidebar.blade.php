@@ -10,20 +10,20 @@
                 <li class="menu-title" key="t-menu">Menu</li>
 
                 <li>
-                    <a  class="waves-effect">
-                        <i class="bx bx-home-circle"></i>
+                    <a href="/" class="waves-effect">
+                        <i class="bx bx-home-alt"></i>
                         <span>Dashboard</span>
                     </a>
                 </li>
                 <li>
                     <a  class="has-arrow waves-effect">
-                        <i class="bx bx-home-circle"></i>
+                        <i class="bx bx-spreadsheet"></i>
                         <span>Data Table</span>
                     </a>
                     <ul class="sub-menu" aria-expanded="false">
-                        <li><a href={{ route('seller.index') }} ><span class="bx bx-id-card"> Seller</a></li>
-                        <li><a href={{ route('supplier.index') }} ><span class="bx bxs-user"> Supplier</a></li>
-                        <li><a href={{ route('barang.index') }} ><span class="bx bx-package"> Barang</a></li>
+                        <li><a href="{{ route('seller.index') }}"> <i class="bx bxs-user-rectangle"></i>Seller</a></li>
+                        <li><a href="{{ route('supplier.index') }}"> <i class="bx bxs-truck"></i>Supplier</a></li>
+                        <li><a href="{{ route('barang.index') }}"> <i class="bx bxs-package"></i>Barang</a></li>
                     </ul>
                 </li>
 
