@@ -29,3 +29,6 @@ Route::resource('kantin', kantinController::class);
 Route::resource('seller', sellerController::class);
 Route::resource('pemasok', pemasokController::class);
 
+// delete route
+Route::get('/seller/{seller}/delete',[sellerController::class,'delete']);
+
