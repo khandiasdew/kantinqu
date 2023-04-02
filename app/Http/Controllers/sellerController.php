@@ -61,7 +61,8 @@ class sellerController extends Controller
      */
     public function edit($id)
     {
-        //
+        $seller = seller::find($id);
+        return view('seller.edit', compact('seller'));
     }
 
     /**

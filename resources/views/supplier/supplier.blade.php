@@ -20,7 +20,9 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h4 class="card-title">Data supplier</h4>
+                    <h4 class="card-title">
+                        Data supplier <span><a href="{{ route('supplier.create') }}" class="btn btn-primary btn-sm"><i class="bx bx-plus"></i></a></span>
+                    </h4>
                     <p class="card-title-desc">semua data supplier/makanan dan minuman terinci di tabel ini
                     </p>
 
@@ -29,7 +31,7 @@
                             <tr>
                                 <th>Nama supplier</th>
                                 <th>Nama Warung</th>
-
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -37,6 +39,10 @@
                             <tr>
                                 <td>{{ $item->nama_supplier }}</td>
                                 <td>{{ $item->nama_warung }}</td>
+                                <td style="width:15%">
+                                    <button class="btn btn-warning btn-sm"><i class="bx bxs-edit"></i>Edit</button>
+                                    <button class="btn btn-danger btn-sm"><i class="bx bxs-trash"></i>Hapus</button>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

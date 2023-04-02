@@ -38,7 +38,7 @@ class supplierController extends Controller
     {
         $supplier = supplier::create($request->all());
         $supplier->save();
-        return redirect()->route('kantin.index');
+        return redirect()->route('supplier.index');
 
     }
 

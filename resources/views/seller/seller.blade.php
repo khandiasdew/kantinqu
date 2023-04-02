@@ -20,7 +20,9 @@
             <div class="card">
                 <div class="card-body">
 
-                    <h4 class="card-title">Data seller</h4>
+                    <h4 class="card-title">
+                        Data seller <span><a href="{{ route('seller.create') }}" class="btn btn-primary btn-sm"><i class="bx bx-plus"></i></a></span>
+                    </h4>
                     <p class="card-title-desc">semua data seller terinci di tabel ini
                     </p>
 
@@ -30,7 +32,8 @@
                                 <th>Tanggal</th>
                                 <th>Nama </th>
                                 <th>Kelas </th>
-                                <th>No.Absen </th>
+                                <th>No.Absen</th>
+                                <th>Aksi</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -40,6 +43,10 @@
                                 <td>{{ $item->nama_seller }}</td>
                                 <td>{{ $item->kelas }}</td>
                                 <td>{{ $item->no_absen }}</td>
+                                <td style="width:15%">
+                                    <button class="btn btn-warning btn-sm"><i class="bx bxs-edit"></i>Edit</button>
+                                    <button class="btn btn-danger btn-sm"><i class="bx bxs-trash"></i>Hapus</button>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
