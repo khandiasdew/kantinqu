@@ -59,9 +59,9 @@ class sellerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id_seller)
     {
-        $seller = seller::find($id);
+        $seller = seller::find($id_seller);
         return view('seller.edit', compact('seller'));
     }
 
@@ -72,11 +72,16 @@ class sellerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id_seller)
     {
-        $seller = seller::find($id);
+        // $seller = seller::find($id_seller);
+        // $seller->update($request->all());
+        // $seller->save();
+
+        $seller = seller::find($id_seller);
         $seller->update($request->all());
-        $seller->save();
+
+        return redirect()->route('seller.index');
     }
 
     /**
@@ -89,10 +94,10 @@ class sellerController extends Controller
     {
         //
     }
-    public function delete($id){
+    public function delete($id_seller){
 
-        $seller = seller::where('id_seller', $id);
+        $seller = seller::where('id_seller', $id_seller);
         $seller->delete();
-        return redirect()->route('admin.index');
+        return redirect()->route('seller.index');
     }
 }
