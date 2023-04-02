@@ -44,8 +44,8 @@
                                 <td>{{ $item->kelas }}</td>
                                 <td>{{ $item->no_absen }}</td>
                                 <td style="width:15%">
-                                    <button class="btn btn-warning btn-sm"><i class="bx bxs-edit"></i>Edit</button>
-                                    <button class="btn btn-danger btn-sm"><i class="bx bxs-trash"></i>Hapus</button>
+                                    <a href="{{ url('/seller/'.$item->id_seller.'/edit') }}" class="btn btn-warning btn-sm">Edit <i class="bx bxs-edit"></i></a>
+                                    <a href="{{ url('/seller/'.$item->id_seller.'/delete') }}" class="btn btn-danger btn-sm">Delete <i class="bx bxs-trash"></i></a>
                                 </td>
                             </tr>
                             @endforeach
