@@ -91,7 +91,7 @@ class supplierController extends Controller
     public function delete($id){
 
         $supplier = supplier::where('id_supplier', $id);
-    $supplier->delete();
+        $supplier->delete();
         return redirect()->route('admin.index');
     }
 }

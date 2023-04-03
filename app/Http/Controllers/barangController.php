@@ -94,7 +94,7 @@ class barangController extends Controller
     public function delete($id){
 
         $barang = barang::where('id_barang', $id);
-    $barang->delete();
+        $barang->delete();
         return redirect()->route('admin.index');
     }
 }

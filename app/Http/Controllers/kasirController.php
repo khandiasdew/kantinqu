@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\pemasok;
+use App\Models\seller;
+use App\Models\supplier;
 use Illuminate\Http\Request;
 
-class pemasokController extends Controller
+class kasirController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +15,9 @@ class pemasokController extends Controller
      */
     public function index()
     {
-        $supplier = pemasok::all();
-        return view('dashboard.supplier',compact('supplier'));
-
+        $seller = seller::whereDate('created_at', now()->toDateString())->first();
+        $supplier = supplier::all();
+        return view('kasir',compact('seller','supplier'));
     }
 
     /**
@@ -26,7 +27,7 @@ class pemasokController extends Controller
      */
     public function create()
     {
-        return view('supplier.create');
+        //
     }
 
     /**

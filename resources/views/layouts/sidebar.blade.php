@@ -26,6 +26,12 @@
                         <li><a href="{{ route('barang.index') }}"> <i class="bx bxs-package"></i>Barang</a></li>
                     </ul>
                 </li>
+                <li>
+                    <a href="{{ route('kasir.index') }}" class="waves-effect">
+                        <i class="bx bx-store"></i>
+                        <span>Kasir</span>
+                    </a>
+                </li>
 
                 {{-- <li class="menu-title" key="t-apps">admin</li>
                 <li>
