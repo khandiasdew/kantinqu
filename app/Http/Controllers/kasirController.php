@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kasir;
 use App\Models\seller;
 use App\Models\supplier;
 use Illuminate\Http\Request;
@@ -17,6 +18,7 @@ class kasirController extends Controller
     {
         $seller = seller::whereDate('created_at', now()->toDateString())->first();
         $supplier = supplier::all();
+        $kasir = Kasir::all();
         return view('kasir',compact('seller','supplier'));
     }
 
