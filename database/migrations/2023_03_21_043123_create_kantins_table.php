@@ -14,6 +14,7 @@ class CreateKantinsTable extends Migration
     public function up()
     {
         Schema::create('kantins', function (Blueprint $table) {
+            $table->id('id_kartin');
             $table->timestamps();
         });
     }

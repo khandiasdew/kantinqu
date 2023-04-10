@@ -18,7 +18,8 @@ class CreateBarangsTable extends Migration
             $table->string('nama_barang');
             $table->integer('jumlah_barang');
             $table->bigInteger('harga_barang');
-            $table->bigInteger('id_supplier');
+            $table->unsignedBigInteger('id_supplier');
+            $table->foreign('id_supplier')->references('id_supplier')->on('suppliers');
             $table->timestamps();
         });
     }
