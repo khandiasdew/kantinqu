@@ -16,7 +16,7 @@
 
 
     {{-- <h2>{{ $seller->nama_seller }}</h2> --}}
-    
+
     <div class="row">
         <div class="col-12">
             <div class="card">
@@ -40,7 +40,7 @@
                         <tbody>
                             @foreach ($barang as $item)
                             <tr>
-                                <td>{{ $item->supplier->nama_supplier }}    
+                                <td>{{ $item->id_supplier}}
                                     {{-- <a href="" class="fas fa-plus-circle"></a></td> --}}
                                 <td>{{ $item->nama_barang }}</td>
                                 <td>{{ $item->jumlah_barang }}</td>

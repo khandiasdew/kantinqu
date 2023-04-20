@@ -10,7 +10,7 @@ class barang extends Model
     use HasFactory;
     public function supplier()
     {
-        return $this->hasOne(supplier::class, 'id_supplier');
+        return $this->hasOne(supplier::class, 'supplier_id','id_suppliers' );
     }
     protected $table = "barangs";
     protected $primaryKey = 'id_barang';
